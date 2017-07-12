@@ -209,8 +209,6 @@ return wqa;
     }
     .button {
         background-color: white;
-        width: 250px;
-        height: 200px;
         font-size: 20px;
         font-style: bold;
         text-align: center;
@@ -218,7 +216,7 @@ return wqa;
         border-color: black;
         border-width: 2px;
         border-style: solid;
-        box-sizing: border-box;
+        border-radius: 10%;
     }
     .quote {
         font: Monospace;
@@ -268,7 +266,7 @@ return wqa;
                     var author = newQuote.titles.replace(/<(?:.|\n)*?>/gm, '');
                     $(".quote").html('"' + quote + '"');
                     $(".author").html("-" + author);
-                    $("#share").attr("onclick", '"' + "window.open('https://twitter.com/intent/tweet?text=" + '"' + quote.slice(0,100) + '..." -' + author.slice(0,30) + "')" + '"');
+                    $("#share").attr("onClick", '"' + "window.open('https://twitter.com/intent/tweet?text=" + '"' + quote.slice(0,100) + '..." -' + author.slice(0,30) + "')" + '"');
                 });
             }, function(msg) {
                     console.log(msg);
@@ -307,7 +305,7 @@ return wqa;
   <span 
    id="button"
    class="share button" 
-   onclick="window.open('https://twitter.com/intent/tweet?text=Yoda')">
+   onClick="window.open('https://twitter.com/intent/tweet?text=Yoda')">
     Share
 </span>
     </div>
