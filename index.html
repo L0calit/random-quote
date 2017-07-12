@@ -209,7 +209,9 @@ return wqa;
     }
     .button {
         background-color: white;
-        font-size: 10px;
+        width: 250px;
+        height: 200px;
+        font-size: 20px;
         font-style: bold;
         text-align: center;
         font: Monospace;
@@ -265,7 +267,7 @@ return wqa;
                     var author = newQuote.titles.replace(/<(?:.|\n)*?>/gm, '');
                     $(".quote").html('"' + quote + '"');
                     $(".author").html("-" + author);
-                    $(".share").attr("href", "https://twitter.com/intent/tweet?text=" + '"' + quote.slice(0,100) + '..." -' + author.slice(0,30));
+                    $(".share").attr("onclick", "window.open('https://twitter.com/intent/tweet?text=" + '"' + quote.slice(0,100) + '..." -' + author.slice(0,30) + "')" + '"');
                 });
             }, function(msg) {
                     console.log(msg);
@@ -305,7 +307,7 @@ return wqa;
    id="button"
    class="share button" 
    onclick="window.open('https://twitter.com/intent/tweet?text=Yoda')">
-Share
+    Share
 </span>
     </div>
 
