@@ -266,7 +266,7 @@ return wqa;
                     var author = newQuote.titles.replace(/<(?:.|\n)*?>/gm, '');
                     $(".quote").html('"' + quote + '"');
                     $(".author").html("-" + author);
-                    $(".share").attr("onClick", '"' + "window.open('https://twitter.com/intent/tweet?text=" + '"' + quote.slice(0,100) + '..." -' + author.slice(0,30) + "')" + '"');
+                    $(".share").attr("onClick", "window.open('https://twitter.com/intent/tweet?text=" + '"' + quote.slice(0,100) + '..." -' + author.slice(0,30) + "')");
                 });
             }, function(msg) {
                     console.log(msg);
